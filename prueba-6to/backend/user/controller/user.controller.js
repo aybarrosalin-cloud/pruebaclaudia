@@ -1,4 +1,4 @@
-import userService from '../service/user.service'
+import userService from '../service/user.service.js'
 
 class userController {
     async getUsers(req, res) {
@@ -53,4 +53,4 @@ class userController {
     }
 }
 
-export default userController
+export default new userController

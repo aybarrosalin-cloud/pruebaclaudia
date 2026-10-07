@@ -1,12 +1,12 @@
 import { EntitySchema } from 'typeorm'
 
-export default User = new EntitySchema({
+const User = new EntitySchema({
     name: 'User',
     tableName: 'users',
 
     columns: {
         id: {
-            type: int,
+            type: "int",
             primary: true,
             generated: true
         },
@@ -20,3 +20,5 @@ export default User = new EntitySchema({
         }
     }
 }) 
+
+export default User

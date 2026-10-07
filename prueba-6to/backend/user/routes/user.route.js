@@ -1,19 +1,19 @@
-// Donde estarán mis rutas del modulo usuarios 
+// Donde estarán mis rutas del modulo usuarios
 
 // Aquí se llama al controlador, SIEMPRE no al servicio.
 
-import { Router } from 'express'
+import express from "express";
 
-const userController = require('../controller/user.controller')
+import userController from "../controller/user.controller.js";
 
-const userRoutes = Router()
+const userRoutes = express.Router();
 
-userRoutes.get('/users', userController.getUsers)
+userRoutes.get("/users", userController.getUsers);
 
-userRoutes.post('/user', userController.saveUsers)
+userRoutes.post("/user", userController.saveUsers);
 
-userRoutes.put('/user/:id', userController.updateUser(req.params.id))
+userRoutes.put("/user/:id", userController.updateUser);
 
-userRoutes.delete('/delete-user/:id', userController.deleteUser(req.params.id))
+userRoutes.delete("/delete-user/:id", userController.deleteUser);
 
-export default userRoutes
+export default userRoutes;
